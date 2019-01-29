@@ -326,7 +326,8 @@ export default {
             tableData: null,
             tablePagination: null,
             currentPage: 1,
-            visibleDetailRows: []
+            visibleDetailRows: [],
+            jumpPage: 0
         }
     },
     directives: {
@@ -935,5 +936,13 @@ export default {
     .vuetable-pagination-info {
       margin-top: auto;
       margin-bottom: auto;
+    }
+    .vuetable-pagination-jump {
+        display: inline-block;
+        margin-left: 20px;
+    }
+    .vuetable-pagination-jump input {
+        max-width: 50px;
+        display: inline-block;
     }
 </style>

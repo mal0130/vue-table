@@ -36,6 +36,15 @@
                 <i v-if="icons.last != ''" class="{{icons.last}}"></i>
                 <span v-else>&raquo;</span>
             </a>
+            <span>{{tablePagination.current_page}} / {{totalPage}}</span>
+            <div class="vuetable-pagination-jump">
+                <span>到第</span>
+                <input class="form-control" type="text" v-model="jumpPage" @keyup.enter="loadPage(jumpPage)">
+                <span>页</span>
+                <a @click="loadPage(jumpPage)" class="btn btn-default">
+                    <span>确认</span>
+                </a>
+            </div>
         </div>
 </template>
 
